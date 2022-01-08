@@ -1,0 +1,23 @@
+{
+  "name": "my-node-service1",
+  "version": "1.0.0",
+  "description": "Example function for serverless kubeless",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "end-of-stream": "^1.4.4",
+    "from2": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "kubeless function update handler --runtime nodejs14 --dependencies package.json --handler handler.hello --from-file handler.js"
+  },
+  "keywords": [
+    "serverless",
+    "kubeless"
+  ],
+  "author": "The Kubeless Authors",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "serverless-kubeless": "^0.11.2"
+  }
+}
